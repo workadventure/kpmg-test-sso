@@ -56,6 +56,8 @@ WA.onInit().then(() => {
         })
     }).safeParse(WA.metadata);
 
+    console.log("metadata", WA.metadata);
+
     if (metadataIsOk.success && metadataIsOk.data.player.accessTokens.length > 0) {
         const userToken = metadataIsOk.data.player.accessTokens[0].token;
         let tokenData: SSOToken;
