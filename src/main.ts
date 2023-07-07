@@ -110,7 +110,7 @@ function parseJwt(token: string): SSOToken {
 function startTeamsStatusCheckInterval(client: AxiosInstance, token: SSOToken) {
     teamsStatusCheckInterval = setInterval(() => {
         checkTeamsStatus(client, token);
-    }, 60000);
+    }, 5000);
 }
 
 /**
